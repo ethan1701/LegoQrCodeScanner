@@ -1,8 +1,8 @@
 function generate_legoLink(userInput) {
   const encodedInput = encodeURIComponent(userInput);
-  const output = document.getElementById("interface");
-  const url = 'https://lego.com/en-us/scan?id=${userInput}&source=builder';
-  output.innerHTML = '<p>Generated URL:</p><a href="${url}" target="_blank">${url}</a>';
+  //const output = document.getElementById("output");
+  const url = `https://lego.com/en-us/scan?id=${userInput}&source=builder`;
+  interface.innerHTML = `<p>Generated URL:</p><a href="${url}" target="_blank">${url}</a>`;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function onScanSuccess(decodedText, decodedResult) {
 	generate_legoLink(decodedText);
-	console.log('Code scanned = ${decodedText}', decodedResult);
-	html5QrcodeScanner.clear();
+  //console.log(`Code scanned = ${decodedText}`, decodedResult);
+  html5QrcodeScanner.clear();
 }
 
 var html5QrcodeScanner = new Html5QrcodeScanner(
