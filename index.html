@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGO URL Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/html5-qrcode@2.0.9/dist/html5-qrcode.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+        <h1>LEGO set registration URL Generator</h1>
+        <div style="width: 500px" id="qr-reader"></div>
+        <form id="urlForm">
+            <label for="inputString">Or paste the URL from your QR code:</label>
+            <input type="text" id="inputString" placeholder="Paste QR URL here">
+            <button type="submit">Generate URL</button>
+        </form>
+        <div id="output"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
