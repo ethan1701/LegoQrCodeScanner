@@ -1,6 +1,6 @@
 function generate_legoLink(userInput) {
   const encodedInput = encodeURIComponent(userInput);
-  //const output = document.getElementById("output");
+  const output = document.getElementById("interface");
   const url = `https://lego.com/en-us/scan?id=${userInput}&source=builder`;
   output.innerHTML = `<p>Generated URL:</p><a href="${url}" target="_blank">${url}</a>`;
 }
